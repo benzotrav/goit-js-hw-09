@@ -1,6 +1,7 @@
 import flatpickr from "flatpickr";
-import "flatpickr/dist/flatpickr.min.css" 
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import "flatpickr/dist/flatpickr.min.css";
+import Notiflix from "notiflix";
+
 
 class Timer { 
   constructor({ selector, date }) { 
@@ -83,5 +84,5 @@ function dateCheck(date) {
     return; 
   }
   startBtn.disabled = true; 
-  Notify.failure('Choose another date');
+  Notiflix.Notify.failure('Choose another date');
 }
